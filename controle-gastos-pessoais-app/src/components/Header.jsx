@@ -1,13 +1,27 @@
+import { NavLink } from 'react-router-dom'
+
 const Header = () => {
     return(
         <header>
-            <nav>
-                <p className="header-logo">Gastos Pessoais</p>
-
-                <ul>
-                    <li><a href="#">Início</a></li>
-                    <li><a href="">Despesas</a></li>
-                </ul>
+            <div className="header-titulo">
+                <h1>Meus gastos Pessoais</h1>
+                <p className="header-logo">Gerenciador dos seus Gastos Pessoais</p>
+            </div>
+            <nav className="header-nav">
+                <NavLink
+                    to="/"
+                    end
+                    className={({ isActive }) => isActive ? 'nav-link ativo' : 'nav-link'}
+                >
+                    Inicio
+                </NavLink>
+                <NavLink
+                    to="/"
+                    end
+                    className={({ isActive }) => isActive ? 'nav-link ativo' : 'nav-link'}
+                >
+                    Gastos
+                </NavLink>
             </nav>
         </header>
     );
