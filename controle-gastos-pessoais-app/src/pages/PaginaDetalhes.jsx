@@ -22,8 +22,6 @@ function PaginaDetalhes() {
         )
     }
 
-    const metaAtingida = gasto.diasFeitos >= gasto.meta
-
     const handleRemover = () => {
         removerGasto(gasto.id)
         navigate('/gastos')
@@ -41,17 +39,8 @@ function PaginaDetalhes() {
 
                 <ul className="detalhe-info">
                     <li><strong>Categoria:</strong> {gasto.categoria || 'Geral'}</li>
-                    <li><strong>Meta semanal:</strong> {gasto.meta} dias</li>
-                    <li><strong>Dias feitos:</strong> {gasto.diasFeitos}</li>
-                    <li>
-                        <strong>Status:</strong>{' '}
-                        <span style={{ color: gasto.ativo ? '#16a34a' : '#9ca3af' }}>
-                            {gasto.ativo ? '✅ Ativo' : '⏸️ Pausado'}
-                        </span>
-                    </li>
-                    {metaAtingida && (
-                        <li>🏆 Meta da semana atingida!</li>
-                    )}
+                    {/* <li><strong>Meta semanal:</strong> {gasto.meta} dias</li>
+                    <li><strong>Dias feitos:</strong> {gasto.diasFeitos}</li> */}
                 </ul>
 
                 <button onClick={handleRemover} className="btn-remover">
