@@ -12,8 +12,16 @@ function App() {
 
   return (
     <div>
-    < Footer/>
+      <Header/>
+      <Routes>
+        <Route path='/' element={<PaginaInicio/>}/>
+        <Route path='/lista-gasto' element={<PaginaGastos/>}/>
+        <Route path='/gastos/:id' element={<PaginaDetalhes/>}/>
+        <Route path='*' element={<PaginaNaoEncontrada/>}/>
+      </Routes>
+      <Footer/>
     </div>
+    
   )
 }
 
