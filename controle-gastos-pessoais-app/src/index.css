@@ -72,6 +72,12 @@ main{
   min-height: 85dvh;
 }
 
+.gasto-card{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  border: 1px solid purple;
+}
+
 #root {
   width: 1126px;
   max-width: 100%;
