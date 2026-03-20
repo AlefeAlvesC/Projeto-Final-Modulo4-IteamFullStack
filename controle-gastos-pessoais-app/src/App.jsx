@@ -11,7 +11,6 @@ import PaginaNaoEncontrada from './pages/PaginaNaoEncontrada'
 function App() {
 
   return (
-    
     <div>
       <Header/>
       <Routes>
