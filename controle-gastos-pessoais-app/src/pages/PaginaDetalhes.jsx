@@ -14,7 +14,7 @@ function PaginaDetalhes() {
     if (!gasto) {
         return (
             <main className="pagina-detalhes container">
-                <h1>Hábito não encontrado</h1>
+                <h1>Gasto não encontrado</h1>
                 <button onClick={() => navigate('/gastos')}>
                     ← Voltar para a lista
                 </button>
@@ -39,8 +39,6 @@ function PaginaDetalhes() {
 
                 <ul className="detalhe-info">
                     <li><strong>Categoria:</strong> {gasto.categoria || 'Geral'}</li>
-                    {/* <li><strong>Meta semanal:</strong> {gasto.meta} dias</li>
-                    <li><strong>Dias feitos:</strong> {gasto.diasFeitos}</li> */}
                 </ul>
 
                 <button onClick={handleRemover} className="btn-remover">

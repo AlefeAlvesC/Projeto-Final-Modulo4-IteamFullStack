@@ -1,15 +1,16 @@
 import { useState, useRef } from 'react'
-import { useNavigate } from 'react-router-dom' 
+import { useLocation, useNavigate } from 'react-router-dom' 
 import { useGastos } from '../contexts/GastosContext'
 
 function FormNovoGasto(){
   const { gastos, adicionarGasto, removerGasto } = useGastos();
   const navigate = useNavigate()
-
+  const location = useLocation()
+  const categoriaInicial = location.state?.categoria || ''
 
   const [form, setForm] = useState({
     nome: '',
-    categoria: '',
+    categoria: categoriaInicial,
     data: '',
     valor: '',
     status: ''
