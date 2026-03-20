@@ -97,26 +97,6 @@ function FormNovoGasto(){
         <button type="submit">Adicionar Gasto</button>
       </form>
 
-      {/*
-      {habits.length === 0 && (
-        <p>Nenhum hábito cadastrado ainda. Que tal começar?</p>
-      )}
-
-      
-      <ul>
-        {gastos.map((gastos) => (
-          <HabitCard
-            key={gastos.id}
-            id={gastos.id}
-            nome={gastos.nome}
-            descricao={gastos.descricao}
-            valor={gastos.valor}
-            pago={gastos.pago}
-            categoria={gastos.categoria}
-          />
-        ))}
-      </ul>
-      */}
     </section>
   )
 

@@ -46,6 +46,7 @@ function AdicionarEntrada() {
           type="text"
           name="nome"
           placeholder="Ex: Salário"
+          value={form.nome}
           onChange={handleChange}
           required
         />
@@ -54,6 +55,7 @@ function AdicionarEntrada() {
           type="number"
           name="valor"
           placeholder="Valor"
+          value={form.valor}
           onChange={handleChange}
           required
         />
@@ -61,6 +63,7 @@ function AdicionarEntrada() {
         <input
           type="date"
           name="data"
+          value={form.data}
           onChange={handleChange}
           required
         />
