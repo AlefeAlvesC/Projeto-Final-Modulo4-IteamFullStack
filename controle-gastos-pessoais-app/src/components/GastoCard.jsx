@@ -25,7 +25,7 @@ function GastoCard({id, nome, categoria= "Geral", valor, pago = false }){
         )}
       </div>
 
-    </div>
+        </div>
     )
     
 }
