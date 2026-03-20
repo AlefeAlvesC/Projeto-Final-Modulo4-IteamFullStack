@@ -30,6 +30,7 @@
     font-size: 16px;
   }
 }
+
 /*
 @media (prefers-color-scheme: dark) {
   :root {
@@ -53,7 +54,9 @@
 */
 
 /*Resete de CSS*/
-*, *::after, *::before{
+*,
+*::after,
+*::before {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -63,24 +66,25 @@ body {
   margin: 0;
 }
 
-header{
+header {
   display: flex;
   justify-content: space-between;
   padding: 20px;
 }
 
-main{
+main {
   min-height: 78dvh;
 }
+
 section {
- display: flex;
- padding: 20px;
- align-items: center;
- margin: 0 auto;
- justify-content: center;
+  display: flex;
+  padding: 20px;
+  align-items: center;
+  margin: 0 auto;
+  justify-content: center;
 }
 
-.gasto-card{
+.gasto-card {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   border: 1px solid purple;
@@ -108,20 +112,24 @@ h1 {
   font-size: 56px;
   letter-spacing: -1.68px;
   margin: 32px 0;
+
   @media (max-width: 1024px) {
     font-size: 36px;
     margin: 20px 0;
   }
 }
+
 h2 {
   font-size: 24px;
   line-height: 118%;
   letter-spacing: -0.24px;
   margin: 0 0 8px;
+
   @media (max-width: 1024px) {
     font-size: 20px;
   }
 }
+
 p {
   margin: 0;
 }
@@ -140,6 +148,7 @@ code {
   padding: 4px 8px;
   background: var(--code-bg);
 }
+
 header {
   width: 100%;
   background-color: var(--accent);
@@ -148,12 +157,14 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  
+
 }
+
 .header-nav {
   display: flex;
-  gap: 20px; 
+  gap: 20px;
 }
+
 .nav-link {
   color: white;
   text-decoration: none;
@@ -167,48 +178,53 @@ header {
   background-color: rgba(255, 255, 255, 0.2);
   transform: translateY(-3px);
 }
+
 .header-logo strong {
   font-size: 20px;
   letter-spacing: 0.5px;
 }
 
 footer {
- padding: 10px;
- background-color: var(--accent);
- color: #f9fafb;
- text-align: center;
+  padding: 10px;
+  background-color: var(--accent);
+  color: #f9fafb;
+  text-align: center;
 }
 
-.div-gastos{
+.div-gastos {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   padding: 30px;
   gap: 10px;
   list-style: none;
 }
-.div-nome-card{
+
+.div-nome-card {
   background-color: #747bff;
   border-radius: 50px;
   padding: 15px;
 }
-.div-nome-card a{
+
+.div-nome-card a {
   text-decoration: none;
   color: #08060d;
 }
-.div-botão{
+
+.div-botão {
   display: flex;
-  gap:20px;
+  gap: 20px;
   justify-content: center;
 }
+
 .btn-primario {
   background-color: #747bff;
   border-radius: 20px;
-  gap:20%;
-  color:#08060d;
+  gap: 20%;
+  color: #08060d;
   text-decoration: none;
 }
 
-.gasto-form{
+.gasto-form {
   width: 60%;
   justify-content: center;
   background-color: #ffffff;
@@ -218,13 +234,14 @@ footer {
   box-shadow: 0 1px 3px rgba(15, 23, 42, 0.1);
   margin-bottom: 16px;
 }
-.gasto-form label{
+
+.gasto-form label {
   display: block;
   margin-bottom: 5px;
   font-size: 1.1rem;
 }
 
-.gasto-form input{
+.gasto-form input {
   width: 100%;
   padding: 6px 8px;
   margin-top: 4px;
@@ -232,7 +249,8 @@ footer {
   border: 1px solid #d4d4d8;
   font-size: 0.9rem;
 }
-.gasto-form button{
+
+.gasto-form button {
   margin-top: 8px;
   padding: 8px 16px;
   border-radius: 4px;
@@ -240,4 +258,8 @@ footer {
   background-color: #111827;
   color: #fbf9f9;
   cursor: pointer;
+}
+
+.bloco-inicio-txt {
+  margin: 1rem 0;
 }
