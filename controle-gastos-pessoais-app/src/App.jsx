@@ -5,6 +5,7 @@ import { Routes, Route } from 'react-router-dom'
 import PaginaInicio from './pages/PaginaInicio'
 import PaginaGastos from './pages/PaginaGastos'
 import PaginaDetalhes from './pages/PaginaDetalhes'
+import PaginaFormulario from './pages/PaginaFormulario'
 import PaginaNaoEncontrada from './pages/PaginaNaoEncontrada'
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Route path='/' element={<PaginaInicio/>}/>
         <Route path='/lista-gasto' element={<PaginaGastos/>}/>
         <Route path='/gastos/:id' element={<PaginaDetalhes/>}/>
+        <Route path='/adicionar-gasto' element={<PaginaFormulario/>}/>
         <Route path='*' element={<PaginaNaoEncontrada/>}/>
       </Routes>
       <Footer/>

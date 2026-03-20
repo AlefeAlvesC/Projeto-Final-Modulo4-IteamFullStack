@@ -1,11 +1,9 @@
-
 import { useState, useRef } from 'react'
 import { useNavigate } from 'react-router-dom' 
-import GastoCard from '../components/GastoCard'
-import { useHabits } from '../contexts/HabitsContext'
+import { useGastos } from '../contexts/GastosContext'
 
 function FormNovoGasto(){
-const { gastos } = useHabits()
+  const { gastos } = useGastos()
   const navigate = useNavigate()
 
 
@@ -47,11 +45,12 @@ const { gastos } = useHabits()
     }
 
     adicionarHabit(novoGasto)
-    setForm({ novoNome: '', novaDescricao: '', novaCategoria: '', novoPago: '7', novoValor: '' })
+    setForm({ novoNome: '', novaDescricao: '', novaCategoria: '', novoPago: '', novoValor: '' })
     setErroNome('')
     navigate('/lista-gasto')                            
   }
-  if (!habits) return null
+  
+  if (!gastos) return null
 
   return (
     <section>
@@ -83,15 +82,12 @@ const { gastos } = useHabits()
         <div>
           <label>
             Categoria
-            <select id="categoria" name="novaCategoria"
+            <input 
+              type="text"
+              name="novaCategoria"
+              id="categoria"
               value={form.novaCategoria}
-              onChange={handleChange}>
-            <option value="Alimentação">Alimentação</option>
-            <option value="Contas Fixas">Contas Fixas</option>
-            <option value="Transporte">Transporte</option>
-            <option value="Lazer">Lazer</option>
-            <option value="Outro">Outro</option>
-            </select>
+            />
           </label>
         </div>
         <div>
@@ -108,10 +104,12 @@ const { gastos } = useHabits()
         <button type="submit">Adicionar Gasto</button>
       </form>
 
+      {/*
       {habits.length === 0 && (
         <p>Nenhum hábito cadastrado ainda. Que tal começar?</p>
       )}
 
+      
       <ul>
         {gastos.map((gastos) => (
           <HabitCard
@@ -125,7 +123,10 @@ const { gastos } = useHabits()
           />
         ))}
       </ul>
+      */}
     </section>
   )
 
 }
+
+export default FormNovoGasto;
