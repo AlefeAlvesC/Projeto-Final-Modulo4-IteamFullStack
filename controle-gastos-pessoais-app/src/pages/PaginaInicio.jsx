@@ -1,33 +1,39 @@
 // src/pages/PaginaInicio.jsx
 
+import { useGastos } from '../contexts/GastosContext'
+
+
+
+
+// src/pages/PaginaInicio.jsx
+
 import { Link } from 'react-router-dom'
-/*import { useGastos } from '../contexts/GastosContext'*/
-import GastosSugests from '../components/GastosSugests'
 
 function PaginaInicio() {
-    {/*const { gastos } = useGastos()*/}
+  const { gastos } = useGastos()
 
-    return (
-        <main className="pagina-inicio container">
-            <h1>Meus Gastos Pessoais</h1>
-            <p>Seu painel de controle pessoal para gerenciar seus gastos financeiros.</p>
+  const gastosAtivos = gastos.filter(h => h.ativo).length
 
-            {/* 
-            <div className="resumo">
-                <div className="resumo-card">
-                    <strong>{gastos.length}</strong>
-                    <span>Gastos Totais</span>
-                </div>
-            </div>
-            */}
-            <GastosSugests />
-            
+  return (
+    <main className="pagina-inicio">
+      <h1>Meus gastos</h1>
+      <p>Meus gastos tudinhos... </p>
 
-            <Link to="/lista-gasto" className="btn-primario" style={{ fontSize: '1.1rem', padding: '1rem 2.5rem' }}>
-                Ver meus gastos →
-            </Link>
-        </main>
-    )
+      <div className="resumo">
+        <div className="resumo-card">
+          <strong>{gastos.length}</strong>
+          <span>gastos cadastrados</span>
+        </div>
+        <div className="resumo-card">
+          <strong>{gastosAtivos}</strong>
+          <span>ativos agora</span>
+        </div>
+      </div>
+            <Link to="/habitos" className="btn-primario">
+        Ver meus gastos →
+      </Link>
+    </main>
+  )
 }
 
 export default PaginaInicio
