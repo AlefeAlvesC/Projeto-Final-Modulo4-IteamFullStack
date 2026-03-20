@@ -4,12 +4,12 @@ import { Link } from 'react-router-dom'
 import { useGastos } from '../contexts/GastosContext'
 import GastosSugests from '../components/GastosSugests'
 
-function PaginaInicio() 
-    {const  {gastos } = useGastos()
+function PaginaInicio() {
+    const { gastos } = useGastos()
 
-     let saldo = 0;
+    let saldo = 0;
 
-       gastos.forEach((g) => {
+    gastos.forEach((g) => {
       if (g.tipo === "entrada") {
         saldo += Number(g.valor);
       } else {

@@ -80,6 +80,12 @@ section {
  justify-content: center;
 }
 
+.gasto-card{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  border: 1px solid purple;
+}
+
 #root {
   max-width: 100%;
   margin: 0 auto;
