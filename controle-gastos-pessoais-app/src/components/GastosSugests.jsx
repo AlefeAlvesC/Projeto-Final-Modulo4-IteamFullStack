@@ -5,7 +5,7 @@ const GastosSugests = () => {
         <div>
             <h2>Adicione um gasto</h2>
             <h3><i className="fa-solid fa-layer-group"></i> Adicionar por Categorias</h3>
-            <div>
+            <div className="div-gastos">
 
                 <CardSugests name={"Contas"}>
                     <i className="fa-solid fa-house"></i>

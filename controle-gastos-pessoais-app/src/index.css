@@ -8,6 +8,7 @@
   --accent-bg: rgba(170, 59, 255, 0.1);
   --accent-border: rgba(170, 59, 255, 0.5);
   --social-bg: rgba(244, 243, 236, 0.5);
+  --teste: rgb(247, 229, 113);
   --shadow:
     rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
 
@@ -69,11 +70,23 @@ header{
 }
 
 main{
-  min-height: 85dvh;
+  min-height: 78dvh;
+}
+section {
+ display: flex;
+ padding: 20px;
+ align-items: center;
+ margin: 0 auto;
+ justify-content: center;
+}
+
+.gasto-card{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  border: 1px solid purple;
 }
 
 #root {
-  width: 1126px;
   max-width: 100%;
   margin: 0 auto;
   text-align: center;
@@ -157,4 +170,74 @@ header {
 .header-logo strong {
   font-size: 20px;
   letter-spacing: 0.5px;
+}
+
+footer {
+ padding: 10px;
+ background-color: var(--accent);
+ color: #f9fafb;
+ text-align: center;
+}
+
+.div-gastos{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 30px;
+  gap: 10px;
+  list-style: none;
+}
+.div-nome-card{
+  background-color: #747bff;
+  border-radius: 50px;
+  padding: 15px;
+}
+.div-nome-card a{
+  text-decoration: none;
+  color: #08060d;
+}
+.div-botão{
+  display: flex;
+  gap:20px;
+  justify-content: center;
+}
+.btn-primario {
+  background-color: #747bff;
+  border-radius: 20px;
+  gap:20%;
+  color:#08060d;
+  text-decoration: none;
+}
+
+.gasto-form{
+  width: 60%;
+  justify-content: center;
+  background-color: #ffffff;
+  padding: 16px;
+  border-radius: 10px;
+  border: 3px solid #08060d;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.1);
+  margin-bottom: 16px;
+}
+.gasto-form label{
+  display: block;
+  margin-bottom: 5px;
+  font-size: 1.1rem;
+}
+
+.gasto-form input{
+  width: 100%;
+  padding: 6px 8px;
+  margin-top: 4px;
+  border-radius: 5px;
+  border: 1px solid #d4d4d8;
+  font-size: 0.9rem;
+}
+.gasto-form button{
+  margin-top: 8px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: none;
+  background-color: #111827;
+  color: #fbf9f9;
+  cursor: pointer;
 }

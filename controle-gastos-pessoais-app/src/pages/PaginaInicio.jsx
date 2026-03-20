@@ -4,12 +4,12 @@ import { Link } from 'react-router-dom'
 import { useGastos } from '../contexts/GastosContext'
 import GastosSugests from '../components/GastosSugests'
 
-function PaginaInicio() 
-    {const  {gastos } = useGastos()
+function PaginaInicio() {
+    const { gastos } = useGastos()
 
-     let saldo = 0;
+    let saldo = 0;
 
-       gastos.forEach((g) => {
+    gastos.forEach((g) => {
       if (g.tipo === "entrada") {
         saldo += Number(g.valor);
       } else {
@@ -20,7 +20,7 @@ function PaginaInicio()
     console.log(gastos)
 
     return (
-        <main className="pagina-inicio container">
+        <main className="pagina-inicio-container">
             <h1>Meus Gastos Pessoais</h1>
             <p>Seu painel de controle pessoal para gerenciar seus gastos financeiros.</p>
             <h2>Saldo: R$ {saldo}</h2>
@@ -34,15 +34,16 @@ function PaginaInicio()
             */}
             <GastosSugests />
             
-
-            <Link to="/lista-gasto" className="btn-primario" style={{ fontSize: '1.1rem', padding: '1rem 2.5rem' }}>
+            <div className='div-botão'>
+            <Link to="/lista-gasto" className="btn-primario" style={{ fontSize: '1.1rem', padding: '0.8rem 1.5rem' }}>
                 Ver meus gastos →
             
             </Link>
 
-            <Link to="/adicionar-entrada" >
+            <Link to="/adicionar-entrada" className='btn-primario' style={{ fontSize: '1.1rem', padding: '0.8rem 1.5rem' }} >
                 Adicionar Entrada 
              </Link>
+             </div>
         </main>
     )
 }
