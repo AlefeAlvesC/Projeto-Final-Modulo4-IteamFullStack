@@ -15,7 +15,8 @@ function PaginaDetalhes() {
         return (
             <main className="pagina-detalhes container">
                 <h1>Gasto não encontrado</h1>
-                <button onClick={() => navigate('/gastos')}>
+                <p>Você pode adicionar novos gastos na outra pagina, clique em/ voltar... </p>
+                <button onClick={() => navigate('/')}>
                     ← Voltar para a lista
                 </button>
             </main>
@@ -24,7 +25,7 @@ function PaginaDetalhes() {
 
     const handleRemover = () => {
         removerGasto(gasto.id)
-        navigate('/gastos')
+        navigate('/')
     }
 
     return (
@@ -39,7 +40,10 @@ function PaginaDetalhes() {
 
                 <ul className="detalhe-info">
                     <li><strong>Categoria:</strong> {gasto.categoria || 'Geral'}</li>
+                    <li><strong>Custo:</strong>{gasto.valor}</li>
+                    <li><strong>Status:</strong> {gasto.status ? "Está pago" : "Pagamento pendente"}</li>
                 </ul>
+
 
                 <button onClick={handleRemover} className="btn-remover">
                     Remover Gasto

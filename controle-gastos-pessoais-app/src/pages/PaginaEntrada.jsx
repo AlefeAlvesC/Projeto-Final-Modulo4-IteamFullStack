@@ -38,10 +38,12 @@ function AdicionarEntrada() {
   };
 
   return (
-    <main>
+      <main>
       <h2>Adicionar Entrada</h2>
-
-      <form onSubmit={handleSubmit}>
+      <section>
+      <form onSubmit={handleSubmit} className="div-form-orcamento">
+        <div>
+        <label htmlFor="nome">Nome do Orçamento *</label>
         <input
           type="text"
           name="nome"
@@ -50,7 +52,7 @@ function AdicionarEntrada() {
           onChange={handleChange}
           required
         />
-
+        <label htmlFor="valor">Valor: </label>
         <input
           type="number"
           name="valor"
@@ -59,7 +61,7 @@ function AdicionarEntrada() {
           onChange={handleChange}
           required
         />
-
+        <label htmlFor="data">Data: </label>
         <input
           type="date"
           name="data"
@@ -68,8 +70,10 @@ function AdicionarEntrada() {
           required
         />
 
-        <button type="submit">Adicionar Entrada</button>
+        <button className="btn-adicionar-entrada" type="submit">Adicionar Entrada</button>
+        </div>
       </form>
+      </section>
     </main>
   );
 }
