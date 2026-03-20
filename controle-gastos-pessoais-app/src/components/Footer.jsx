@@ -1,7 +1,7 @@
 function Footer() {
     return ( 
     <footer>
-    <small>Projeto Final – Desenvolvimento Front-end com React</small>
+        <small>Projeto Final – Desenvolvimento Front-end com React</small>
     </footer>
     )
 }

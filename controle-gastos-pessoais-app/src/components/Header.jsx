@@ -3,9 +3,9 @@ import { NavLink } from 'react-router-dom'
 const Header = () => {
     return(
         <header>
-            <div className="header-titulo">
-                <h1>Meus gastos Pessoais</h1>
-                <p className="header-logo">Gerenciador dos seus Gastos Pessoais</p>
+            <div className="header-logo">
+                <strong>Gerenciador de Gastos</strong>
+                {/*<p className="header-logo">Gerenciador dos seus Gastos Pessoais</p>*/}
             </div>
             <nav className="header-nav">
                 <NavLink
