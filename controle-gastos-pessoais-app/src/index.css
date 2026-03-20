@@ -224,7 +224,7 @@ footer {
   text-decoration: none;
 }
 
-.gasto-form {
+.gasto-form, .div-form-orcamento {
   width: 60%;
   justify-content: center;
   background-color: #ffffff;
@@ -235,13 +235,13 @@ footer {
   margin-bottom: 16px;
 }
 
-.gasto-form label {
+.gasto-form label, .div-form-orcamento label{
   display: block;
   margin-bottom: 5px;
   font-size: 1.1rem;
 }
 
-.gasto-form input {
+.gasto-form input, .div-form-orcamento input {
   width: 100%;
   padding: 6px 8px;
   margin-top: 4px;
@@ -250,7 +250,7 @@ footer {
   font-size: 0.9rem;
 }
 
-.gasto-form button {
+.gasto-form button, .div-form-orcamento button {
   margin-top: 8px;
   padding: 8px 16px;
   border-radius: 4px;
