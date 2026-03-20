@@ -43,7 +43,8 @@ function FormNovoGasto(){
       categoria: form.categoria || 'Geral',
       data: form.data,
       status: false,
-      valor: form.valor,
+      valor:Number(form.valor),
+      tipo: "saida"
     }
 
     adicionarGasto(novoGasto);

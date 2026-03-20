@@ -127,3 +127,34 @@ code {
   padding: 4px 8px;
   background: var(--code-bg);
 }
+header {
+  width: 100%;
+  background-color: var(--accent);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  
+}
+.header-nav {
+  display: flex;
+  gap: 20px; 
+}
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-3px);
+}
+.header-logo strong {
+  font-size: 20px;
+  letter-spacing: 0.5px;
+}
