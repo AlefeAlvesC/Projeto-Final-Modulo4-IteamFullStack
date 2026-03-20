@@ -19,7 +19,7 @@ function PaginaInicio() {
 
             </div>
 
-            <Link to="/gastos" className="btn-primario" style={{ fontSize: '1.1rem', padding: '1rem 2.5rem' }}>
+            <Link to="/lista-gasto" className="btn-primario" style={{ fontSize: '1.1rem', padding: '1rem 2.5rem' }}>
                 Ver meus gastos →
             </Link>
         </main>
