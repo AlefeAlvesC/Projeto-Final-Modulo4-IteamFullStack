@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom'
 
-function GastoCard({id, nome, categoria= "Geral", valor, pago = false, onRemover}){
+function GastoCard({id, nome, categoria= "Geral", valor, pago = false }){
     return (
         <div className="gasto-card">
         <div className="gasto-card-header">
             <h3>{nome}</h3>
-            <span style={{ color: pago ? '#16a34a' : '#9ca3af' }}>
+            <span style={{ color: ativo ? '#16a34a' : '#9ca3af' }}>
             {pago ? '✅ Pago' : '🚫Não Pago'}
         </span>
       </div>

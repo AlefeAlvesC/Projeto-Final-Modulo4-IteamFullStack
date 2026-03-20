@@ -10,8 +10,9 @@ function FormNovoGasto(){
   const [form, setForm] = useState({
     nome: '',
     categoria: '',
+    data: '',
     valor: '',
-    pago: '',
+    status: ''
   })
 
   const [erroNome, setErroNome] = useState('')
@@ -40,12 +41,13 @@ function FormNovoGasto(){
       id: Date.now(),
       nome: form.nome,
       categoria: form.categoria || 'Geral',
+      data: form.data,
+      status: false,
       valor: form.valor,
-      pago: false,
     }
 
     adicionarGasto(novoGasto);
-    setForm({ nome: '', categoria: '', valor: '', pago: '' })
+    setForm({ nome: '', categoria: '', data: '', valor: '', status: '' })
     setErroNome('')
     navigate('/lista-gasto')                            
   }
@@ -74,17 +76,17 @@ function FormNovoGasto(){
         </div>
 
         <div>
-          <label htmlFor="data">Valor *</label>
+          <label htmlFor="data">Data *</label>
           <input type="date" name="data" id="data" required
-            value={form.valor}
+            value={form.data}
             onChange={handleChange}
           />
         </div>
       
         <div>
-          <label htmlFor="valor">Pago</label>
+          <label htmlFor="valor">Valor</label>
           <input type="number" name="valor" id="valor"
-            value={form.pago}
+            value={form.valor}
             onChange={handleChange}
             required
           />
