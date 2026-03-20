@@ -1,6 +1,5 @@
 import { createContext, useContext , useState, useEffect} from "react";
 
-
 export const GastosContext = createContext(null);
 
 export const GastosProvider = ({children}) => {
@@ -8,7 +7,7 @@ export const GastosProvider = ({children}) => {
         const stored = localStorage.getItem('meus-gastos');
 
         if (!stored) return [
-            {id: "1", nome: "Rancho" , categoria: "Comida", valor: "500", pago: false}
+            {id: "1", nome: "Rancho" , categoria: "Comida", valor: "500", status: false, data: "3/20/2026"},
         ];
 
         try{
@@ -23,8 +22,16 @@ export const GastosProvider = ({children}) => {
         localStorage.setItem("meus-gastos", JSON.stringify(gastos));
     }, [gastos])
 
+    const adicionarGasto = (novoGasto) => {
+        setGastos(prev => ([...prev, novoGasto]));
+    }
+
+    const removerGasto = (id) => {
+        setGastos(prev => (prev.filter(gasto => gasto.id !== id)));
+    }
+
     return(
-        <GastosContext.Provider value={{gastos}}>
+        <GastosContext.Provider value={{gastos, adicionarGasto, removerGasto}}>
             {children}
         </GastosContext.Provider>
     );

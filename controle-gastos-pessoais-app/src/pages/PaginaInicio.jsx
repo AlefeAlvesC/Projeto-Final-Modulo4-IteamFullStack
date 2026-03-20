@@ -1,11 +1,11 @@
 // src/pages/PaginaInicio.jsx
 
 import { Link } from 'react-router-dom'
-import { useGastos } from '../contexts/GastosContext'
+/*import { useGastos } from '../contexts/GastosContext'*/
 import GastosSugests from '../components/GastosSugests'
 
 function PaginaInicio() {
-    const { gastos } = useGastos()
+    {/*const { gastos } = useGastos()*/}
 
     return (
         <main className="pagina-inicio container">
