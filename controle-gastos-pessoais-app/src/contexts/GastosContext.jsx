@@ -9,7 +9,7 @@ export const GastosProvider = ({children}) => {
 
         if (!stored) return [
             {id: "1", nome: "Rancho" , categoria: "Comida", valor: "500", pago: false}
-        ]
+        ];
 
         try{
             return JSON.parse(stored);
