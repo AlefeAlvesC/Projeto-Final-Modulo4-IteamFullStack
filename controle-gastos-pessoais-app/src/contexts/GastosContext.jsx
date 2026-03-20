@@ -33,5 +33,5 @@ export const GastosProvider = ({children}) => {
 
 //Hook useGastos personalidos que permite a utilização do contexto
 export const useGastos = () =>  {
-    useContext(GastosContext);
+    return useContext(GastosContext);
 }
