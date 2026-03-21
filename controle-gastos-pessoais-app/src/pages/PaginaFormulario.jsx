@@ -13,8 +13,6 @@ const PaginaFormulario = () => {
         setTipoForm(false);
     }
 
-
-
     return(
         <main>
             <section>
@@ -51,9 +49,6 @@ const PaginaFormulario = () => {
                 </div>
                 
             </section>
-            
-            
-            
         </main>
     );    
 }

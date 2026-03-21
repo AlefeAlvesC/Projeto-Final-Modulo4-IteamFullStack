@@ -53,7 +53,7 @@ export const GastosProvider = ({ children }) => {
     };
 
     return(
-        <GastosContext.Provider value={{gastos, adicionarGasto, removerGasto, adicionarOrcamento, removerOrcamento}}>
+        <GastosContext.Provider value={{gastos, orcamento, adicionarGasto, removerGasto, adicionarOrcamento, removerOrcamento}}>
             {children}
         </GastosContext.Provider>
     );
