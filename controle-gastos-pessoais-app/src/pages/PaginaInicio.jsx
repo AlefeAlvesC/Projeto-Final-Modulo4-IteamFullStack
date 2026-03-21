@@ -27,11 +27,11 @@ function PaginaInicio() {
   console.log(gastos)
 
   return (
-    <main className="pagina-inicio-container">
+    <main className="pagina-inicio">
       <h1>Meus Gastos Pessoais</h1>
       <p>Seu painel de controle pessoal para gerenciar seus gastos financeiros.</p>
       <div className='div-inicio-card'>
-      < CardInicio saldo ={saldo} name="Seu saldo"/>
+      < CardInicio saldo ={saldo} name="Saldo total"/>
       < CardInicio saldo ={orcamento} name="Entradas"/>
       < CardInicio saldo ={saida} name="Saídas"/>
       </div>
