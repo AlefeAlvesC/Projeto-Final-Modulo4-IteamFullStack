@@ -73,7 +73,7 @@ header {
 }
 
 main {
-  min-height: 78dvh;
+  min-height: 90dvh;
 }
 
 section {
@@ -210,7 +210,7 @@ footer {
   color: #08060d;
 }
 
-.div-botão {
+.div-botão, .div-botoes-detalhe {
   display: flex;
   gap: 20px;
   justify-content: center;
@@ -263,6 +263,58 @@ footer {
 .bloco-inicio-txt {
   margin: 1rem 0;
 }
+.pagina-detalhes.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.detalhe-card {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+  gap: 10px;
+  background-color: #d4d4d8;
+  border-radius: 20px;
+}
+
+.detalhe-info li{
+  list-style: none;
+  color:#08060d;
+}
+
+.btn-voltar{
+  background-color: #747bff;
+  border-radius: 20px;
+  gap: 20%;
+  color: #08060d;
+}
+
+.btn-remover{
+  background-color: rgb(223, 48, 48);
+  border-radius: 20px;
+  gap: 20%;
+  color: #08060d;
+}
+
+.div-inicio-card{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  padding: 20px;
+  gap: 10px;
+  border-radius: 20px;
+}
+
+.card-inicio{
+  background-color:#d4d4d8;
+  width: 60%;
+  padding: 20px;
+  border-radius: 10px;
+}
+
 
 .nova-transa {
   display: flex;
