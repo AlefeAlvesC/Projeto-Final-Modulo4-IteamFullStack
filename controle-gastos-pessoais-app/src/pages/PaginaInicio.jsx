@@ -43,7 +43,7 @@ function PaginaInicio() {
 
         </Link>
 
-        <Link to="/adicionar-entrada" className='btn-primario' style={{ fontSize: '1.1rem', padding: '0.8rem 1.5rem' }} >
+        <Link to="/adicionar" className='btn-primario' style={{ fontSize: '1.1rem', padding: '0.8rem 1.5rem' }} >
           Adicionar Entrada
         </Link>
       </div>

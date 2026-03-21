@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useGastos } from "../contexts/GastosContext";
 
-function AdicionarEntrada() {
+function FormNovaEntrada() {
 
   const { adicionarGasto } = useGastos();
   const navigate = useNavigate();
@@ -78,4 +78,4 @@ function AdicionarEntrada() {
   );
 }
 
-export default AdicionarEntrada;
+export default FormNovaEntrada;
