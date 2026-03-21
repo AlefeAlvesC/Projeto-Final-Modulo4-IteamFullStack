@@ -57,10 +57,8 @@ function FormNovoGasto(){
   if (!gastos) return null
 
   return (
-    <div>
-    <h2>Adicionar Gasto</h2>
-    <section>
-      <form onSubmit={handleSubmit} className="gasto-form">
+    <div className='form-container'>
+      <form onSubmit={handleSubmit} className="form">
         <div>
           <label htmlFor="nome">Nome do gasto *</label>
           <input type="text" name="nome" id="nome"
@@ -68,6 +66,7 @@ function FormNovoGasto(){
             onChange={handleChange}
             ref={nomeInputRef}
           />
+
           {erroNome && <p style={{ color: 'red', fontSize: '0.8rem' }}>{erroNome}</p>}
         </div>
 
@@ -95,11 +94,9 @@ function FormNovoGasto(){
             required
           />
         </div>
-       
+      
         <button type="submit">Adicionar Gasto</button>
       </form>
-
-    </section>
     </div>
   )
 

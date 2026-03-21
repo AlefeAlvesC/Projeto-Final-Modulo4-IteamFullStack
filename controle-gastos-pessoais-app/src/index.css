@@ -62,54 +62,6 @@
   padding: 0;
 }
 
-body {
-  margin: 0;
-}
-
-header {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px;
-}
-
-main {
-  min-height: 90dvh;
-}
-
-.pagina-inicio {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 10px 0;
-}
-
-section {
-  display: flex;
-  padding: 20px;
-  align-items: center;
-  margin: 0 auto;
-  justify-content: center;
-}
-
-.gasto-card {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  padding: 5px;
-  border: 1.2px solid #d4d4d8;
-}
-.div-lista{
-  background-color: #d4d4d8 ;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  list-style: none;
-  color:#08060d;
-  
-}
-.div-lista li{
-  font-size: 1.3rem;
-  gap:10px;
-}
-
 #root {
   max-width: 100%;
   margin: 0 auto;
@@ -121,6 +73,305 @@ section {
   box-sizing: border-box;
 }
 
+body {
+  margin: 0;
+}
+
+header {
+  width: 100%;
+  background-color: var(--accent);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+
+}
+
+.header-nav {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-3px);
+}
+
+.header-logo strong {
+  font-size: 20px;
+  letter-spacing: 0.5px;
+}
+
+main {
+  min-height: 90dvh;
+}
+
+footer {
+  padding: 10px;
+  background-color: var(--accent);
+  color: #f9fafb;
+  text-align: center;
+}
+
+
+
+section {
+  display: flex;
+  padding: 20px;
+  align-items: center;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+
+
+/*Estilos relacionados a página incio e seus componentes*/
+.pagina-inicio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.div-inicio-card{
+  min-width: 70%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 20px;
+  gap: 20px;
+  border-radius: 20px;
+}
+
+.card-inicio{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color:#d4d4d8;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.card-inicio span{
+  font-size: 0.8rem;
+}
+
+.card-inicio h2 {
+  font-size: 1.7rem;
+}
+
+.bloco-inicio-txt {
+  margin: 1rem 0;
+}
+
+.div-gastos {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 30px;
+  gap: 10px;
+  list-style: none;
+}
+
+.div-nome-card {
+  background-color: #747bff;
+  border-radius: 50px;
+  padding: 15px;
+}
+
+.div-nome-card a{
+  text-decoration: none;
+  color: #fff;
+}
+
+.inicio-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.btn-primario {
+  background-color: #747bff;
+  border-radius: 20px;
+  gap: 20%;
+  color: #fff;
+  text-decoration: none;
+}
+
+
+
+
+/*Estilos referentes a pagina gastos e seus componentes*/
+.div-lista{
+  background-color: #d4d4d8 ;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  list-style: none;
+  color:#08060d;
+}
+
+.div-lista li{
+  font-size: 1.3rem;
+  gap:10px;
+}
+
+.gasto-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  padding: 5px;
+  border: 1.2px solid #d4d4d8;
+}
+
+
+
+
+
+/*Estilos relacionados a pagina formulario e seus componentes*/
+
+.nova-transa {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+  gap: 25px;
+  border: 1px solid rgb(163, 142, 164);
+  border-radius: 5px;
+  background-color: rgb(231, 223, 229);
+}
+
+.transa-title {
+  width: 100%;
+  display: block;
+  border-bottom: 1px solid rgb(163, 142, 164);
+  padding: 15px;
+}
+
+.type-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-width: 50%;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.type-form button {
+  padding: 10px;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  transition: 0.5s;
+}
+
+.type-form .button-entrada:hover {
+  background-color: rgb(157, 202, 157);
+}
+
+.type-form .button-saida:hover{
+  background-color: rgb(201, 128, 128);
+}
+
+.form-container {
+  width: 90%;
+  margin-bottom: 20px;
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.form label{
+  margin-bottom: 5px;
+  font-size: 1.1rem;
+}
+
+.form input {
+  width: 100%;
+  padding: 6px 8px;
+  margin-top: 4px;
+  border-radius: 5px;
+  border: 1px solid #d4d4d8;
+  font-size: 0.9rem;
+  background-color: #ffffff;
+  color: black;
+}
+
+.form button {
+  margin-top: 8px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: none;
+  background-color: #111827;
+  color: #fbf9f9;
+  cursor: pointer;
+}
+
+
+
+
+/*Estilos da pagina de Detalhes e seus componentes*/
+
+.pagina-detalhes.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.detalhe-card {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+  gap: 10px;
+  background-color: #d4d4d8;
+  border-radius: 20px;
+}
+
+.detalhe-info li{
+  list-style: none;
+  color:#08060d;
+}
+
+.div-botoes-detalhe {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.btn-voltar{
+  background-color: #747bff;
+  border-radius: 20px;
+  gap: 20%;
+  color: #08060d;
+}
+
+.btn-remover{
+  background-color: rgb(223, 48, 48);
+  border-radius: 20px;
+  gap: 20%;
+  color: #08060d;
+}
+
+
+
+
+
+
+
+
+/*Estilos padrões do react*/
 h1,
 h2 {
   font-family: var(--heading);
@@ -167,219 +418,4 @@ code {
   line-height: 135%;
   padding: 4px 8px;
   background: var(--code-bg);
-}
-
-header {
-  width: 100%;
-  background-color: var(--accent);
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-
-}
-
-.header-nav {
-  display: flex;
-  gap: 20px;
-}
-
-.nav-link {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-  padding: 6px 10px;
-  border-radius: 6px;
-  transition: 0.3s;
-}
-
-.nav-link:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-  transform: translateY(-3px);
-}
-
-.header-logo strong {
-  font-size: 20px;
-  letter-spacing: 0.5px;
-}
-
-footer {
-  padding: 10px;
-  background-color: var(--accent);
-  color: #f9fafb;
-  text-align: center;
-}
-
-.div-gastos {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  padding: 30px;
-  gap: 10px;
-  list-style: none;
-}
-
-.div-nome-card {
-  background-color: #747bff;
-  border-radius: 50px;
-  padding: 15px;
-}
-
-.div-nome-card a{
-  text-decoration: none;
-  color: #fff;
-}
-
-.div-botão, .div-botoes-detalhe {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-}
-
-.btn-primario {
-  background-color: #747bff;
-  border-radius: 20px;
-  gap: 20%;
-  color: #fff;
-  text-decoration: none;
-}
-
-.gasto-form, .div-form-orcamento{
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  
-}
-
-.gasto-form label, .div-form-orcamento label{
-  margin-bottom: 5px;
-  font-size: 1.1rem;
-}
-
-.gasto-form input, .div-form-orcamento input {
-  width: 100%;
-  padding: 6px 8px;
-  margin-top: 4px;
-  border-radius: 5px;
-  border: 1px solid #d4d4d8;
-  font-size: 0.9rem;
-}
-
-.gasto-form button, .div-form-orcamento button {
-  margin-top: 8px;
-  padding: 8px 16px;
-  border-radius: 4px;
-  border: none;
-  background-color: #111827;
-  color: #fbf9f9;
-  cursor: pointer;
-}
-
-.bloco-inicio-txt {
-  margin: 1rem 0;
-}
-.pagina-detalhes.container{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.detalhe-card {
-  width: 30%;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  padding: 20px;
-  gap: 10px;
-  background-color: #d4d4d8;
-  border-radius: 20px;
-}
-
-.detalhe-info li{
-  list-style: none;
-  color:#08060d;
-}
-
-.btn-voltar{
-  background-color: #747bff;
-  border-radius: 20px;
-  gap: 20%;
-  color: #08060d;
-}
-
-.btn-remover{
-  background-color: rgb(223, 48, 48);
-  border-radius: 20px;
-  gap: 20%;
-  color: #08060d;
-}
-
-.div-inicio-card{
-  min-width: 70%;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  padding: 20px;
-  gap: 20px;
-  border-radius: 20px;
-}
-
-.card-inicio{
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  background-color:#d4d4d8;
-  padding: 20px;
-  border-radius: 10px;
-}
-
-.card-inicio span{
-  font-size: 0.8rem;
-}
-
-.card-inicio h2 {
-  font-size: 1.7rem;
-}
-
-
-.nova-transa {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 30%;
-  gap: 25px;
-  border: 1px solid rgb(163, 142, 164);
-  border-radius: 5px;
-  background-color: rgb(231, 223, 229);
-}
-
-.transa-title {
-  width: 100%;
-  display: block;
-  border-bottom: 1px solid rgb(163, 142, 164);
-  padding: 15px;
-}
-
-.type-form {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  min-width: 50%;
-  border-radius: 15px;
-  overflow: hidden;
-}
-
-.type-form button {
-  padding: 10px;
-  font-size: 1rem;
-  border: none;
-  cursor: pointer;
-  background-color: white;
-  color: black;
-  transition: 0.5s;
-}
-
-.type-form .button-entrada:hover {
-  background-color: rgb(157, 202, 157);
-}
-
-.type-form .button-saida:hover{
-  background-color: rgb(201, 128, 128);
 }

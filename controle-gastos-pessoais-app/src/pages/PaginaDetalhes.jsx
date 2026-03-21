@@ -30,7 +30,6 @@ function PaginaDetalhes() {
 
     return (
         <main className="pagina-detalhes container">
-
             <div className="detalhe-card">
                 <h1>{gasto.nome}</h1>
                 <p>{gasto.descricao}</p>
@@ -40,15 +39,17 @@ function PaginaDetalhes() {
                     <li><strong>Custo: </strong>{gasto.valor}</li>
                     <li><strong>Status: </strong> {gasto.status ? "Está pago ✅" : "Pagamento pendente ⚠️"}</li>
                 </ul>
-                <div className='div-botoes-detalhe'>
-                <button onClick={() => navigate(-1)} className="btn-voltar" style={{ fontSize: '1rem', padding: '0.5rem 1rem' }}>
-                ← Voltar
-                </button>
-                <button onClick={handleRemover} className="btn-remover" style={{ fontSize: '1rem', padding: '0.5rem 1rem' }}>
-                    Remover Gasto <i class="fa-solid fa-trash"></i>
-                </button>
-                </div>
 
+                <div className='div-botoes-detalhe'>
+                
+                    <button onClick={() => navigate(-1)} className="btn-voltar" style={{ fontSize: '1rem', padding: '0.5rem 1rem' }}>
+                        ← Voltar
+                    </button>
+                    
+                    <button onClick={handleRemover} className="btn-remover" style={{ fontSize: '1rem', padding: '0.5rem 1rem' }}>
+                        Remover Gasto <i class="fa-solid fa-trash"></i>
+                    </button>
+                </div>
             </div>
         </main>
     )

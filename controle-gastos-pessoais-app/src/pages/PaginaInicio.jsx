@@ -6,34 +6,33 @@ import GastosSugests from '../components/GastosSugests'
 import CardInicio from '../components/CardInicio';
 
 function PaginaInicio() {
-  const { gastos } = useGastos()
+  const { gastos , orcamento} = useGastos()
 
   let saldo = 0;
 
-  let orcamento = 0;
+  let entrada = 0;
 
   let saida = 0;
 
+  
+  orcamento.forEach((o) => {
+    entrada += Number(o.valor)
+  })
+
   gastos.forEach((g) => {
-    if (g.tipo === "entrada") {
-      orcamento += Number(g.valor);
-      saldo += Number(g.valor);
-    } else {
-      saldo -= Number(g.valor);
-      saida += Number(g.valor);
-    }
+    saida += Number(g.valor);
   });
 
-  console.log(gastos)
+  saldo = entrada - saida;
 
   return (
     <main className="pagina-inicio">
       <h1>Meus Gastos Pessoais</h1>
       <p>Seu painel de controle pessoal para gerenciar seus gastos financeiros.</p>
       <div className='div-inicio-card'>
-      < CardInicio saldo ={saldo} name="Saldo total"/>
-      < CardInicio saldo ={orcamento} name="Entradas"/>
-      < CardInicio saldo ={saida} name="Saídas"/>
+        < CardInicio saldo ={saldo} name="Saldo total"/>
+        < CardInicio saldo ={entrada} name="Entradas"/>
+        < CardInicio saldo ={saida} name="Saídas"/>
       </div>
       {/* 
             <div className="resumo">
@@ -46,10 +45,10 @@ function PaginaInicio() {
       <div className="bloco-inicio-txt">
         <GastosSugests />
       </div>
-      <div className='div-botão'>
+      
+      <div className='inicio-buttons'>
         <Link to="/lista-gasto" className="btn-primario" style={{ fontSize: '1.1rem', padding: '0.8rem 1.5rem' }}>
           Ver meus gastos →
-
         </Link>
 
         <Link to="/adicionar" className='btn-primario' style={{ fontSize: '1.1rem', padding: '0.8rem 1.5rem' }} >
