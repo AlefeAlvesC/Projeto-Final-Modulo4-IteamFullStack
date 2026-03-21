@@ -57,6 +57,8 @@ function FormNovoGasto(){
   if (!gastos) return null
 
   return (
+    <div>
+    <h2>Adicionar Gasto</h2>
     <section>
       <form onSubmit={handleSubmit} className="gasto-form">
         <div>
@@ -98,6 +100,7 @@ function FormNovoGasto(){
       </form>
 
     </section>
+    </div>
   )
 
 }
