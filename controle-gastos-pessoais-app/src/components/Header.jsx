@@ -16,7 +16,7 @@ const Header = () => {
                     Inicio
                 </NavLink>
                 <NavLink
-                    to="/"
+                    to="/lista-gasto"
                     end
                     className={({ isActive }) => isActive ? 'nav-link ativo' : 'nav-link'}
                 >

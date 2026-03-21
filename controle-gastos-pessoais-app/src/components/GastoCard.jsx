@@ -2,7 +2,9 @@ import { Link } from 'react-router-dom'
 
 function GastoCard({id, data, nome, categoria= "Geral", valor, status = false }){
   return (
+    
     <div className='gasto-card'>
+      
       <span>{data}</span>
 
       <h3>{nome}</h3>
@@ -25,7 +27,7 @@ function GastoCard({id, data, nome, categoria= "Geral", valor, status = false })
             Remover <i class="fa-solid fa-trash"></i>
           </button>
         )*/}
-    </div>
+        </div>
   )
     
 }

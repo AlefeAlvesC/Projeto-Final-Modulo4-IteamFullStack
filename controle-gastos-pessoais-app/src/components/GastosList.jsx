@@ -6,6 +6,15 @@ const GastosList = () => {
 
     return (
         <div>
+        <ul className='div-lista'>
+            <li>Data</li>
+            <li>Nome</li>
+            <li>Status</li>
+            <li>Valor</li>
+            <li>Categoria</li>
+            <li>Link</li>
+        </ul>
+        <div>
             {
                 gastos.map((gasto) => (
                     <GastoCard
@@ -19,6 +28,7 @@ const GastosList = () => {
                     />
                 ))
             }
+            </div>
         </div>
     ) 
 };
