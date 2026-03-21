@@ -38,7 +38,7 @@ function FormNovaEntrada() {
   };
 
   return (
-      <main>
+      <div>
       <h2>Adicionar Entrada</h2>
       <section>
       <form onSubmit={handleSubmit} className="div-form-orcamento">
@@ -52,6 +52,8 @@ function FormNovaEntrada() {
           onChange={handleChange}
           required
         />
+        </div>
+        <div>        
         <label htmlFor="valor">Valor: </label>
         <input
           type="number"
@@ -61,6 +63,8 @@ function FormNovaEntrada() {
           onChange={handleChange}
           required
         />
+        </div>
+        <div>
         <label htmlFor="data">Data: </label>
         <input
           type="date"
@@ -69,12 +73,12 @@ function FormNovaEntrada() {
           onChange={handleChange}
           required
         />
+        </div>
 
         <button className="btn-adicionar-entrada" type="submit">Adicionar Entrada</button>
-        </div>
       </form>
       </section>
-    </main>
+      </div>
   );
 }
 
