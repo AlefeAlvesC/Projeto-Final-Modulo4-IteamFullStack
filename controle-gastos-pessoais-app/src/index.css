@@ -314,3 +314,47 @@ footer {
   padding: 20px;
   border-radius: 10px;
 }
+
+
+.nova-transa {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  border: 1px solid rgb(163, 142, 164);
+  border-radius: 5px;
+  background-color: rgb(231, 223, 229);
+}
+
+.transa-title {
+  width: 100%;
+  display: block;
+  border-bottom: 1px solid rgb(163, 142, 164);
+  padding: 15px;
+}
+
+.type-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-width: 50%;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.type-form button {
+  padding: 10px;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  transition: 0.5s;
+}
+
+.type-form .button-entrada:hover {
+  background-color: rgb(157, 202, 157);
+}
+
+.type-form .button-saida:hover{
+  background-color: rgb(201, 128, 128);
+}

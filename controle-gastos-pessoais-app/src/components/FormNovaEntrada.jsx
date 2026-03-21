@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useGastos } from "../contexts/GastosContext";
 
-function AdicionarEntrada() {
+function FormNovaEntrada() {
 
   const { adicionarGasto } = useGastos();
   const navigate = useNavigate();
@@ -48,6 +48,7 @@ function AdicionarEntrada() {
           type="text"
           name="nome"
           placeholder="Ex: Salário"
+          value={form.nome}
           onChange={handleChange}
           required
         />
@@ -56,6 +57,7 @@ function AdicionarEntrada() {
           type="number"
           name="valor"
           placeholder="Valor"
+          value={form.valor}
           onChange={handleChange}
           required
         />
@@ -63,6 +65,7 @@ function AdicionarEntrada() {
         <input
           type="date"
           name="data"
+          value={form.data}
           onChange={handleChange}
           required
         />
@@ -75,4 +78,4 @@ function AdicionarEntrada() {
   );
 }
 
-export default AdicionarEntrada;
+export default FormNovaEntrada;
