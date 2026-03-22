@@ -95,7 +95,7 @@ function FormNovoGasto(){
           />
         </div>
       
-        <button type="submit">Adicionar Gasto</button>
+        <button className="btn-adicionar-saida" type="submit">Adicionar Gasto</button>
       </form>
     </div>
   )
