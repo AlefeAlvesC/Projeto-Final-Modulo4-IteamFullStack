@@ -14,15 +14,18 @@ function PaginaInicio() {
 
   let saida = 0;
 
+  if ( orcamento ){
+    orcamento.forEach((o) => {
+      entrada += Number(o.valor)
+    })  
+  }
   
-  orcamento.forEach((o) => {
-    entrada += Number(o.valor)
-  })
-
-  gastos.forEach((g) => {
-    saida += Number(g.valor);
-  });
-
+  if( gastos ){
+    gastos.forEach((g) => {
+      saida += Number(g.valor);
+    });
+  }
+  
   saldo = entrada - saida;
 
   return (

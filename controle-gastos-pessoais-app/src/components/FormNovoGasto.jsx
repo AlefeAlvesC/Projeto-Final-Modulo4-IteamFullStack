@@ -54,7 +54,6 @@ function FormNovoGasto(){
     navigate('/lista-gasto')                            
   }
   
-  if (!gastos) return null
 
   return (
     <div className='form-container'>

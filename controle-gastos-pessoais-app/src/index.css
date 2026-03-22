@@ -5,7 +5,7 @@
   --border: #e5e4e7;
   --code-bg: #f4f3ec;
   */
-  --accent: #aa3bff;
+  --accent: rgb(170, 59, 255);
   /*
   --accent-bg: rgba(170, 59, 255, 0.1);
   --accent-border: rgba(170, 59, 255, 0.5);
@@ -211,24 +211,61 @@ section {
 
 
 /*Estilos referentes a pagina gastos e seus componentes*/
-.div-lista{
-  background-color: #d4d4d8 ;
+.pagina-gastos{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  list-style: none;
-  color:#08060d;
+  grid-template-columns: 0.8fr;
+  grid-template-rows: 1fr 9fr;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
 }
 
-.div-lista li{
-  font-size: 1.3rem;
+.gasto-lista{
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 1px 7px rgba(231, 223, 229, 0.8);
+}
+
+.lista-header{
+  background-color: rgb(170, 59, 255, 0.4);/*#d4d4d8 ;*/
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  list-style: none;
+  color:#08060d;
+  padding: 10px;
+}
+
+.lista-header li{
+  font-size: 1.2rem;
+  font-weight: 500;
   gap:10px;
+}
+
+.link-detalhes {
+  display: block;
+  text-decoration: none;
+  color: black;
+  border-left: 1.2px solid #d4d4d8;
+  border-right: 1.2px solid #d4d4d8;
+  border-bottom: 1.2px solid #d4d4d8;
+} 
+
+.link-detalhes:last-child {
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 
 .gasto-card {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   padding: 5px;
-  border: 1.2px solid #d4d4d8;
+}
+
+.gasto-card:hover {
+  background-color: rgba(212, 212, 216, 0.5);
+  transition: 0.5s;
 }
 
 
@@ -267,7 +304,7 @@ section {
   grid-template-columns: 1fr 1fr;
   border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0 1px 5px rgba(231, 223, 229, 0.9);
+  box-shadow: 0px 1px 5px rgba(117, 114, 114, 0.7);
 }
 
 .type-form button {
@@ -276,16 +313,19 @@ section {
   border: none;
   cursor: pointer;
   color: white;
-  transition: 0.5s;
+  transition: 0.7s;
 }
-
+/* Ficou feio, não ativem
 button.button-entrada:hover {
-  background-color: rgb(37, 157, 37);
+  background-color: rgb(37, 157, 37) !important;
+  color: white !important;
 }
 
 button.button-saida:hover {
-  background-color: rgb(213, 45, 45);
+  background-color: rgb(213, 45, 45) !important;
+  color: white !important;
 }
+*/
 
 .form-container {
   width: 90%;
