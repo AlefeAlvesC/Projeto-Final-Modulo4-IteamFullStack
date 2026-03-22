@@ -1,9 +1,13 @@
 import { useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import FormNovoGasto from '../components/FormNovoGasto';
 import FormNovaEntrada from '../components/FormNovaEntrada';
 
 const PaginaFormulario = () => {
-    const [tipoForm, setTipoForm] = useState(true);
+    const location = useLocation();
+    const typeForm = location.state?.form === "entrada" ? true : false;
+
+    const [tipoForm, setTipoForm] = useState(typeForm);
 
     const chamaFormEntrada = () => {
         setTipoForm(true);

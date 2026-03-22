@@ -45,7 +45,6 @@ function FormNovoGasto(){
       data: form.data,
       status: false,
       valor:Number(form.valor),
-      tipo: "saida"
     }
 
     adicionarGasto(novoGasto);
@@ -64,6 +63,7 @@ function FormNovoGasto(){
             value={form.nome}
             onChange={handleChange}
             ref={nomeInputRef}
+            required
           />
 
           {erroNome && <p style={{ color: 'red', fontSize: '0.8rem' }}>{erroNome}</p>}
@@ -77,6 +77,16 @@ function FormNovoGasto(){
           />
         </div>
 
+        
+        <div>
+          <label htmlFor="valor">Valor *</label>
+          <input type="number" name="valor" id="valor"
+            value={form.valor}
+            onChange={handleChange}
+            required
+          />
+        </div>
+
         <div>
           <label htmlFor="data">Data *</label>
           <input type="date" name="data" id="data" required
@@ -85,14 +95,6 @@ function FormNovoGasto(){
           />
         </div>
       
-        <div>
-          <label htmlFor="valor">Valor</label>
-          <input type="number" name="valor" id="valor"
-            value={form.valor}
-            onChange={handleChange}
-            required
-          />
-        </div>
       
         <button className="btn-adicionar-saida" type="submit">Adicionar Gasto</button>
       </form>

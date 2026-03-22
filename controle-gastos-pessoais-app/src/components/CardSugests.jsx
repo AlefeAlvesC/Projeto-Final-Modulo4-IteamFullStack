@@ -5,8 +5,10 @@ const CardSugests = ({ name, children }) => {
     const categoriaParaPassar = name === "Criar com categoria personalizada" ? "" : name;
 
     return (
-        <Link to="/adicionar" state={{ categoria: categoriaParaPassar }} className="div-nome-card" style={{ textDecoration: 'none', color: 'white' }}>
-            {children} {name}
+        <Link to="/adicionar" state={{ categoria: categoriaParaPassar }} className="card-sugests" style={{ textDecoration: 'none', color: 'white' }}>
+            <div>
+                {children} {name}
+            </div>
         </Link>
     )
 };

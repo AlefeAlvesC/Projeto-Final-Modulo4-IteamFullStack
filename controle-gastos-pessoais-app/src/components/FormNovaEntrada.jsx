@@ -50,7 +50,7 @@ function FormNovaEntrada() {
         </div>
         
         <div>        
-          <label htmlFor="valor">Valor</label>
+          <label htmlFor="valor">Valor *</label>
           <input
             id="valor"
             type="number"
@@ -63,7 +63,7 @@ function FormNovaEntrada() {
         </div>
         
         <div>
-          <label htmlFor="data">Data</label>
+          <label htmlFor="data">Data *</label>
           <input
             id="data"
             type="date"

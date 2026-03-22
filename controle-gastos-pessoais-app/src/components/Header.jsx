@@ -1,6 +1,7 @@
 import { NavLink } from 'react-router-dom'
 
 const Header = () => {
+
     return(
         <header>
             <div className="header-logo">
@@ -23,6 +24,8 @@ const Header = () => {
                     Gastos
                 </NavLink>
             </nav>
+
+            <button className='button-burger'><i className='fa-solid fa-bars'></i></button>
         </header>
     );
 };
