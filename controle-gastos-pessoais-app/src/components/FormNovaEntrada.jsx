@@ -39,6 +39,7 @@ function FormNovaEntrada() {
         <div>
           <label htmlFor="nome">Nome do Orçamento *</label>
           <input
+            id="nome"
             type="text"
             name="nome"
             placeholder="Ex: Salário"
@@ -51,6 +52,7 @@ function FormNovaEntrada() {
         <div>        
           <label htmlFor="valor">Valor</label>
           <input
+            id="valor"
             type="number"
             name="valor"
             placeholder="Valor"
@@ -63,6 +65,7 @@ function FormNovaEntrada() {
         <div>
           <label htmlFor="data">Data</label>
           <input
+            id="data"
             type="date"
             name="data"
             value={form.data}

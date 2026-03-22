@@ -14,41 +14,45 @@ const PaginaFormulario = () => {
     }
 
     return(
-        <main>
-            <section>
-                <div className='nova-transa'>
-                    <div className='transa-title'>
-                        <h3>Nova transação</h3>
-                    </div>
-                    
-                    <div className='type-form'>
-                        <button 
-                            className='button-entrada' 
-                            onClick={chamaFormEntrada}
-                            style={tipoForm ? {backgroundColor : "green"} : {backgroundColor : "white"} }
-                        >
-                            Entrada
-                        </button>
-                            
-                        <button 
-                        className='button-saida' 
-                        onClick={chamaFormSaida}
-                        style={!tipoForm ? {backgroundColor : "red"} : {backgroundColor : "white"}  }
-                        >
-                            Saída
-                        </button>
-                    </div>
-
-                    {
-                        tipoForm? 
-                        <FormNovaEntrada/>
-                        :
-                        <FormNovoGasto></FormNovoGasto>
-                    }
-                    
+        <main className='main-form'>
+            <div className='nova-transa'>
+                <div className='transa-title'>
+                    <h3>Nova transação</h3>
                 </div>
                 
-            </section>
+                <div className='type-form'>
+                    <button 
+                        type='button'
+                        className='button-entrada' 
+                        onClick={chamaFormEntrada}
+                        style={
+                            tipoForm ? 
+                            {backgroundColor : "rgba(37, 157, 37, 0.8)"} : 
+                            {backgroundColor : "white", color: "black"} }
+                    >
+                        Entrada
+                    </button>
+                        
+                    <button 
+                        type='button'
+                        className='button-saida' 
+                        onClick={chamaFormSaida}
+                        style={!tipoForm ? 
+                            {backgroundColor : "rgba(213, 45, 45, 0.8)"} : 
+                            {backgroundColor : "white", color: "black"}  }
+                    >
+                        Saída
+                    </button>
+                </div>
+
+                {
+                    tipoForm? 
+                    <FormNovaEntrada/>
+                    :
+                    <FormNovoGasto></FormNovoGasto>
+                }
+                
+            </div>
         </main>
     );    
 }
