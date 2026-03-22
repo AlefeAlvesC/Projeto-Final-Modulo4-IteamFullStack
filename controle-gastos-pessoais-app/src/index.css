@@ -301,32 +301,48 @@ section {
 /*Estilos referentes a pagina gastos e seus componentes*/
 .pagina-gastos{
   display: grid;
-  grid-template-columns: 0.8fr;
-  grid-template-rows: 1fr 9fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 4fr 4fr;
   justify-content: center;
+  justify-items: center;
   align-items: center;
-  padding: 20px 0;
 }
 
-.gasto-lista{
+.container-movimento {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  justify-self: center;
+  gap: 15px;
+  align-self: self-start;
+}
+
+.container-movimento .title{
+  align-self: start;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.movimento-lista{
   display: flex;
   flex-direction: column;
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 1px 7px rgba(231, 223, 229, 0.8);
+  justify-self: center;
 }
 
 .lista-header{
-  background-color: rgb(170, 59, 255, 0.4);/*#d4d4d8 ;*/
+  background-color: rgba(170, 59, 255, 0.8);/*#d4d4d8 ;*/
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   list-style: none;
-  color:#08060d;
+  color:#f9fafb;
   padding: 10px;
 }
 
 .lista-header li{
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 500;
   gap:10px;
 }
@@ -338,6 +354,7 @@ section {
   border-left: 1.2px solid #d4d4d8;
   border-right: 1.2px solid #d4d4d8;
   border-bottom: 1.2px solid #d4d4d8;
+  font-size: 0.8rem;
 } 
 
 .link-detalhes:last-child {
@@ -356,7 +373,43 @@ section {
   transition: 0.5s;
 }
 
+/*Estilos da entrada da pagina de listagem*/
+.entrada-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 5px;
+  border-left: 1.2px solid #d4d4d8;
+  border-right: 1.2px solid #d4d4d8;
+  border-bottom: 1.2px solid #d4d4d8;
+  color: black;
+  font-size: 0.8rem;
+}
 
+.entrada-card:hover {
+  background-color: rgba(212, 212, 216, 0.5);
+  transition: 0.5s;
+
+}
+
+.entrada-card:last-child {
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;  
+}
+
+.entrada-header{
+  background-color: rgba(170, 59, 255, 0.8);/*#d4d4d8 ;*/
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  list-style: none;
+  color:#f9fafb;
+  padding: 10px;
+}
+
+.entrada-header li{
+  font-size: 1rem;
+  font-weight: 500;
+  gap:10px;
+}
 
 
 

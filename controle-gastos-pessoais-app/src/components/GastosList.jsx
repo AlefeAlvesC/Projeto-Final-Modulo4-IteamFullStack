@@ -6,7 +6,7 @@ const GastosList = () => {
     const {gastos} = useGastos();
 
     return (
-        <div className='gasto-lista'>
+        <div className='movimento-lista'>
             <ul className='lista-header'>
                     <li>Data</li>
                     <li>Nome</li>
