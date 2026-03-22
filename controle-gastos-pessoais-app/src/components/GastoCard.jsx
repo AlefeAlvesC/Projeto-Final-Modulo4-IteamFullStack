@@ -1,27 +1,24 @@
-import { Link } from 'react-router-dom'
+
 
 function GastoCard({id, data, nome, categoria= "Geral", valor, status = false }){
+  const valorBr = valor.toLocaleString('pt-BR', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+
   return (
     
     <div className='gasto-card'>
       
-      <span>{data}</span>
+      <p>{data}</p>
 
-      <h3>{nome}</h3>
+      <p>{nome}</p>
 
-      <span style={{ color: status ? '#16a34a' : '#9ca3af' }}>
+      <p style={{ color: status ? '#16a34a' : 'rgba(213, 45, 45, 0.8)' }}>
         {status ? '✅ Pago' : '🚫Não Pago'}
-      </span>
+      </p>
       
-      <p>{valor}</p>
+      <p>{valorBr}</p>
       
-      <small>{categoria}</small>
+      <p>{categoria}</p>
       
-      {/* Link para a página de detalhes — usa o id do hábito na URL */}
-      <Link to={`/gastos/${id}`} className="btn-detalhes">
-        Ver detalhes
-      </Link>
-
         {/*onRemover && (
           <button onClick={onRemover} className="btn-remover-card">
             Remover <i class="fa-solid fa-trash"></i>

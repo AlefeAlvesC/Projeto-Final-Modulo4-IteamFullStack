@@ -6,9 +6,8 @@ export const GastosProvider = ({ children }) => {
     const [gastos, setGastos] = useState(() => {
         const stored = localStorage.getItem('meus-gastos');
 
-        if (!stored) return [
-            { id: 1, nome: "Rancho", categoria: "Comida", valor: "500", status: false, data: "3/20/2026" },
-        ];
+        //Gasto tem:
+        //id, nome, categoria, valor, data, status
 
         try {
             return JSON.parse(stored);
@@ -37,7 +36,11 @@ export const GastosProvider = ({ children }) => {
     }, [gastos, orcamento])
 
     const adicionarGasto = (novoGasto) => {
-        setGastos(prev => ([...prev, novoGasto]));
+        if(gastos) {
+            setGastos(prev => ([...prev, novoGasto]));
+        }else{
+            setGastos([novoGasto])
+        }   
     };
 
     const removerGasto = (id) => {
@@ -45,7 +48,12 @@ export const GastosProvider = ({ children }) => {
     };
 
     const adicionarOrcamento = (novoOrcamento) => {
-        setOrcamento(prev => ([...prev, novoOrcamento]));
+        if(orcamento){
+            setOrcamento(prev => ([...prev, novoOrcamento]));
+        }else{
+            setOrcamento([novoOrcamento])
+        }
+        
     };
 
     const removerOrcamento = (id) => {

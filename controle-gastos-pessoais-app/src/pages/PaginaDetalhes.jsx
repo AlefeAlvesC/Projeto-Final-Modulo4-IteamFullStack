@@ -47,7 +47,7 @@ function PaginaDetalhes() {
                     </button>
                     
                     <button onClick={handleRemover} className="btn-remover" style={{ fontSize: '1rem', padding: '0.5rem 1rem' }}>
-                        Remover Gasto <i class="fa-solid fa-trash"></i>
+                        Remover Gasto <i className="fa-solid fa-trash"></i>
                     </button>
                 </div>
             </div>

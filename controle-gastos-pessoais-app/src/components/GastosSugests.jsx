@@ -2,10 +2,10 @@ import CardSugests from "./CardSugests";
 
 const GastosSugests = () => {
     return(
-        <div>
-            <h2>Adicione um gasto</h2>
+        <div className="container-sug">
+            
             <h3><i className="fa-solid fa-layer-group"></i> Adicionar por Categorias</h3>
-            <div className="div-gastos">
+            <div className="gastos-suggest">
 
                 <CardSugests name={"Contas"}>
                     <i className="fa-solid fa-house"></i>
