@@ -8,7 +8,6 @@ import CardResumo from '../components/CardResumo';
 function PaginaInicio() {
   const { gastos , orcamento} = useGastos()
 
-
   let saldo = 0;
 
   let entrada = 0;

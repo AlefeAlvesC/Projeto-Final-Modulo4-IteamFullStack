@@ -23,7 +23,7 @@ function PaginaGastos() {
             <div className='container-movimento'>
                 <p className='title'>Entradas</p>  
                 {
-                    tamanhoGastos === 0 ? 
+                    tamanhoOrcamento === 0 ? 
                         (<p>Nenhum Entrada Cadastrado</p>) 
                         :
                     <EntradaList />
