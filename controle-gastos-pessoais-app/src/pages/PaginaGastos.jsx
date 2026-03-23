@@ -24,7 +24,7 @@ function PaginaGastos() {
                 <p className='title'>Entradas</p>  
                 {
                     tamanhoGastos === 0 ? 
-                        (<p>Nenhum Gasto Cadastrado</p>) 
+                        (<p>Nenhum Entrada Cadastrado</p>) 
                         :
                     <EntradaList />
                 }  

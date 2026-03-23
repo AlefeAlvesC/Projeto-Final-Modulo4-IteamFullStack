@@ -23,7 +23,9 @@ function PaginaInicio() {
   
   if( gastos ){
     gastos.forEach((g) => {
-      saida += Number(g.valor);
+      if (g.status === false) {
+        saida += Number(g.valor);
+      }
     });
   }
   
@@ -38,9 +40,9 @@ function PaginaInicio() {
       </section>
 
       <section className='resumo'>
-        < CardResumo saldo ={saldo} name="Saldo total"/>
-        < CardResumo saldo ={entrada} name="Entradas"/>
-        < CardResumo saldo ={saida} name="Saídas"/>
+        < CardResumo saldo={saldo} name="Saldo"/>
+        < CardResumo saldo={entrada} name="Entradas"/>
+        < CardResumo saldo={saida} name="Saídas"/>
         <Link 
           to="/lista-gasto" 
           className="btn-primario" 

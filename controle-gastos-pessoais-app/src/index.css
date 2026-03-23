@@ -99,13 +99,18 @@ header {
   text-decoration: none;
   font-weight: 500;
   padding: 6px 10px;
-  border-radius: 6px;
   transition: 0.3s;
+  border-bottom: 3px solid transparent;
+}
+
+.nav-link.ativo {
+  border-bottom: 3px solid #f9fafb;
 }
 
 .nav-link:hover {
+  border-radius: 6px;
   background-color: rgba(255, 255, 255, 0.2);
-  transform: translateY(-3px);
+  border-bottom: 3px solid transparent;
 }
 
 .header-logo strong {
@@ -171,6 +176,12 @@ section {
   background-color:rgba(212, 212, 216, 0.6);
   box-shadow: 0px 1px 7px rgb(117, 114, 114, 0.5);
   transition: 0.5s;
+}
+
+.card-resumo .fa-solid {
+  padding: 5px;
+  border-radius: 5px;
+  width: auto;
 }
 
 .card-resumo span{
@@ -543,20 +554,20 @@ button.button-saida:hover {
 
 /*Estilos da pagina de Detalhes e seus componentes*/
 
-.pagina-detalhes.container{
+.pagina-detalhes{
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .detalhe-card {
-  width: 30%;
   display: flex;
   justify-content: center;
   flex-direction: column;
   padding: 20px;
-  gap: 10px;
-  background-color: #d4d4d8;
+  gap: 20px;
+  background-color: rgba(212, 212, 216, 0.3);
+  box-shadow: 0px 1px 3px rgba(117, 114, 114, 0.5);
   border-radius: 20px;
 }
 
@@ -565,25 +576,57 @@ button.button-saida:hover {
   color:#08060d;
 }
 
-.div-botoes-detalhe {
+.botoes-detalhe {
   display: flex;
   gap: 20px;
   justify-content: center;
 }
 
 .btn-voltar{
-  background-color: #747bff;
+  background-color: rgba(170, 59, 255, 0.8);
+  box-shadow: 0px 1px 3px rgb(117, 114, 114);
   border-radius: 20px;
-  gap: 20%;
   color: #08060d;
+  border: none;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.btn-voltar:hover {
+  background-color: rgb(170, 59, 255);
+  box-shadow: 0px 1px 7px rgb(117, 114, 114);
+}
+
+.btn-alterar {
+  background-color: rgba(170, 59, 255, 0.8);
+  box-shadow: 0px 1px 3px rgb(117, 114, 114);
+  border-radius: 20px;
+  color: #08060d;
+  border: none;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.btn-alterar:hover {
+  background-color: rgb(170, 59, 255);
+  box-shadow: 0px 1px 7px rgb(117, 114, 114);
 }
 
 .btn-remover{
-  background-color: rgb(223, 48, 48);
+  background-color: rgba(213, 45, 45, 0.8);
+  box-shadow: 0px 1px 2px rgb(117, 114, 114);
   border-radius: 20px;
-  gap: 20%;
   color: #08060d;
+  border: none;
+  cursor: pointer;
+  transition: 0.5s;
 }
+
+.btn-remover:hover {
+  background-color: rgba(213, 45, 45);
+  box-shadow: 0px 1px 5px rgb(117, 114, 114);
+}
+
 
 /**/
 

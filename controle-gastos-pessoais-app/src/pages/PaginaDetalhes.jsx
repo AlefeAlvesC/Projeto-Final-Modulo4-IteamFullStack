@@ -5,7 +5,7 @@ import { useGastos } from '../contexts/GastosContext'
 
 function PaginaDetalhes() {
     const { id } = useParams()
-    const { gastos, removerGasto } = useGastos()
+    const { gastos, removerGasto, toggleGasto } = useGastos()
     const navigate = useNavigate()
 
     // useParams retorna string — comparar com === exige conversão
@@ -13,7 +13,7 @@ function PaginaDetalhes() {
 
     if (!gasto) {
         return (
-            <main className="pagina-detalhes container">
+            <main className="pagina-detalhes">
                 <h1>Gasto não encontrado</h1>
                 <p>Você pode adicionar novos gastos na outra pagina, clique em/ voltar... </p>
                 <button onClick={() => navigate('/')}>
@@ -29,10 +29,9 @@ function PaginaDetalhes() {
     }
 
     return (
-        <main className="pagina-detalhes container">
+        <main className="pagina-detalhes">
             <div className="detalhe-card">
                 <h1>{gasto.nome}</h1>
-                <p>{gasto.descricao}</p>
 
                 <ul className="detalhe-info">
                     <li><strong>Categoria: </strong> {gasto.categoria || 'Geral'}</li>
@@ -40,10 +39,20 @@ function PaginaDetalhes() {
                     <li><strong>Status: </strong> {gasto.status ? "Está pago ✅" : "Pagamento pendente ⚠️"}</li>
                 </ul>
 
-                <div className='div-botoes-detalhe'>
+                <div className='botoes-detalhe'>
                 
-                    <button onClick={() => navigate(-1)} className="btn-voltar" style={{ fontSize: '1rem', padding: '0.5rem 1rem' }}>
+                    <button onClick={() => navigate(-1)} 
+                        className="btn-voltar" 
+                        style={{ fontSize: '1rem', padding: '0.5rem 1rem' }}
+                    >
                         ← Voltar
+                    </button>
+
+                    <button onClick={() => toggleGasto(gasto.id)} 
+                        className='btn-alterar'
+                        style={{ fontSize: '1rem', padding: '0.5rem 1rem' }}
+                    >
+                        Alterar Status
                     </button>
                     
                     <button onClick={handleRemover} className="btn-remover" style={{ fontSize: '1rem', padding: '0.5rem 1rem' }}>
