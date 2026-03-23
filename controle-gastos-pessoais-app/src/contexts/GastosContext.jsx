@@ -47,6 +47,15 @@ export const GastosProvider = ({ children }) => {
         setGastos(prev => (prev.filter(gasto => gasto.id !== id)));
     };
 
+    const toggleGasto = (id) => {
+        setGastos(prev => 
+            prev.map( g => g.id === id?
+                {...g, status: !g.status }
+                :
+                g
+        ));
+    }
+
     const adicionarOrcamento = (novoOrcamento) => {
         if(orcamento){
             setOrcamento(prev => ([...prev, novoOrcamento]));
@@ -61,7 +70,7 @@ export const GastosProvider = ({ children }) => {
     };
 
     return(
-        <GastosContext.Provider value={{gastos, orcamento, adicionarGasto, removerGasto, adicionarOrcamento, removerOrcamento}}>
+        <GastosContext.Provider value={{gastos, orcamento, adicionarGasto, removerGasto, toggleGasto, adicionarOrcamento, removerOrcamento}}>
             {children}
         </GastosContext.Provider>
     );
