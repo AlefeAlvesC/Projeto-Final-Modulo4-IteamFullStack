@@ -80,6 +80,7 @@ body {
 }
 
 header {
+  position: relative;
   width: 100%;
   background-color: var(--accent);
   color: white;
@@ -92,6 +93,18 @@ header {
 .header-nav {
   display: none;
   gap: 20px;
+}
+
+.aberto {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: absolute;
+  top: 100%;
+  left: 88%;
+  background-color: rgb(170, 59, 255);
+  gap: 0;
+  padding: 5px;
 }
 
 .nav-link {
@@ -118,6 +131,27 @@ header {
   letter-spacing: 0.5px;
 }
 
+.button-burger {
+  display: flex;
+  border: 0;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: rgba(110, 7, 190, 0.5);
+  box-shadow: 0 1px 3px rgba(110, 7, 190, 0.5);
+  transition: 0.5s;
+}
+
+.button-burger i {
+  color: #f9fafb;
+}
+
+.button-burger:hover {
+  background-color: rgba(110, 7, 190, 1); 
+  box-shadow: 0 1px 5px rgba(110, 7, 190, 0.5);
+}
+
+
+
 main {
   min-height: 90dvh;
 }
@@ -127,6 +161,11 @@ footer {
   background-color: var(--accent);
   color: #f9fafb;
   text-align: center;
+}
+
+button:active, a:active {
+  transform: scale(0.95);
+  transform: 0.2s;
 }
 
 
