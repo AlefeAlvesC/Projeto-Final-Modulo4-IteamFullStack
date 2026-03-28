@@ -77,6 +77,7 @@
 
 body {
   margin: 0;
+  background-color: #f4f4f5;
 }
 
 header {
@@ -101,7 +102,7 @@ header {
   justify-content: space-around;
   position: absolute;
   top: 100%;
-  left: 88%;
+  right: 10px;
   background-color: rgb(170, 59, 255);
   gap: 0;
   padding: 5px;
@@ -205,14 +206,16 @@ section {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  background-color:rgba(212, 212, 216, 0.3);
+
+  /*background-color:rgba(212, 212, 216, 0.3);*/
+  background-color: rgba(255, 255, 255, 1);
   padding: 30px 20px;
   border-radius: 10px;
   box-shadow: 0px 1px 3px rgba(117, 114, 114, 0.5);
 }
 
 .card-resumo:hover{
-  background-color:rgba(212, 212, 216, 0.6);
+  background-color:rgba(255, 255, 255, 0.0);
   box-shadow: 0px 1px 7px rgb(117, 114, 114, 0.5);
   transition: 0.5s;
 }
@@ -232,10 +235,9 @@ section {
 }
 
 .resumo a {
-  display: block;
   background-color: rgba(170, 59, 255, 0.8);
   box-shadow: 0px 1px 3px rgb(117, 114, 114);
-  width: 90%;
+  justify-self: center;
   margin-top: 20px;
 }
 
@@ -245,6 +247,8 @@ section {
   transition: 0.5s;
 }
 
+/* Cards de sugestão de movimentacao*/
+
 .card-sugests {
   display: flex;
   justify-content: center;
@@ -252,7 +256,7 @@ section {
   background-color: rgba(170, 59, 255, 0.8); 
   border-radius: 10px;
   padding: 5px;
-  width: 90%;
+  width: 100%;
   box-shadow: 0px 1px 3px rgb(117, 114, 114);
   justify-self: center;
 }
@@ -262,6 +266,14 @@ section {
  box-shadow: 0px 1px 7px rgb(136, 38, 210);
  transition: 0.5s;
 }
+
+.card-sugests:last-child{
+  grid-column-start: 1;
+  grid-column-end: 3;
+  width: 100%;
+}
+
+
 
 .add-nova-transa {
   display: grid;
@@ -321,29 +333,7 @@ section {
   gap: 10px;
 }
 
-.card-sugests {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(170, 59, 255, 0.8); 
-  border-radius: 10px;
-  padding: 5px;
-  width: 90%;
-  box-shadow: 0px 1px 3px rgb(117, 114, 114);
-  justify-self: center;
-}
 
-.card-sugests:hover {
- background-color: rgb(170, 59, 255);
- box-shadow: 0px 1px 7px rgb(136, 38, 210);
- transition: 0.5s;
-}
-
-.card-sugests:last-child{
-  grid-column-start: 1;
-  grid-column-end: 3;
-  width: 95%;
-}
 
 
 
@@ -670,8 +660,7 @@ button.button-saida:hover {
 /**/
 
 @media (min-width: 480px) {
-  .main-form{
-    
+  .main-form{ 
     grid-template-columns: 0.8fr;
   }
 }
@@ -730,7 +719,6 @@ button.button-saida:hover {
 
   .card-sugests:last-child {
     grid-column-start: 2;
-    width: 90%;
   }
 
   .card-resumo{
