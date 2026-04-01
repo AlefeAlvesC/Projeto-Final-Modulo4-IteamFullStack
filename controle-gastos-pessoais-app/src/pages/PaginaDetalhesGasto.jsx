@@ -3,7 +3,7 @@
 import { useParams, useNavigate } from 'react-router-dom'
 import { useGastos } from '../contexts/GastosContext'
 
-function PaginaDetalhes() {
+function PaginaDetalhesGasto() {
     const { id } = useParams()
     const { gastos, removerGasto, toggleGasto } = useGastos()
     const navigate = useNavigate()
@@ -28,6 +28,8 @@ function PaginaDetalhes() {
         navigate('/')
     }
 
+    const valorBr = gasto.valor.toLocaleString('pt-BR', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+
     return (
         <main className="pagina-detalhes">
             <div className="detalhe-card">
@@ -35,7 +37,7 @@ function PaginaDetalhes() {
 
                 <ul className="detalhe-info">
                     <li><strong>Categoria: </strong> {gasto.categoria || 'Geral'}</li>
-                    <li><strong>Custo: </strong>{gasto.valor}</li>
+                    <li><strong>Custo: </strong>{valorBr}</li>
                     <li><strong>Status: </strong> {gasto.status ? "Está pago ✅" : "Pagamento pendente ⚠️"}</li>
                 </ul>
 
@@ -64,4 +66,4 @@ function PaginaDetalhes() {
     )
 }
 
-export default PaginaDetalhes
+export default PaginaDetalhesGasto

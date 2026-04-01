@@ -42,7 +42,6 @@ function PaginaGastos() {
             </div>
            
 
-            {/*Futuramente mostrar as entradas tbm*/}
         </main>
     )
 }
