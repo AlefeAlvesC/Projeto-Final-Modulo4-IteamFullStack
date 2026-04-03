@@ -10,10 +10,13 @@ const PaginaDetalhesEntrada = () => {
 
     if(!orca) {
         return (
-            <main>
+            <main className="pagina-detalhes">
                 <h1>Orçamento não encontrado</h1>
                 <p>Você pode adicionar novos orçamento na outra pagina, clique em/ voltar... </p>
-                <button onClick={() => navigate('/')}>
+                <button onClick={() => navigate('/')}
+                    className="btn-voltar" 
+                    style={{ fontSize: '1rem', padding: '0.5rem 1rem' }}
+                >
                     ← Voltar para a lista
                 </button>
             </main>

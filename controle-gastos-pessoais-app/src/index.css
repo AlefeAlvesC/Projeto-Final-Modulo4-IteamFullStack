@@ -84,7 +84,7 @@ header {
   position: relative;
   width: 100%;
   background-color: var(--accent);
-  color: white;
+  color: white;/*white*/
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -298,6 +298,8 @@ section {
   text-decoration: none;
   width: 60%;
   justify-self: center;
+  font-size: 1rem; 
+  padding: 0.5rem 1rem;
 }
 
 .btn-entrada {
@@ -586,8 +588,12 @@ button.button-saida:hover {
 
 .pagina-detalhes{
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 15px;
+  width: 90%;
+  justify-self: center;
 }
 
 .detalhe-card {
@@ -656,6 +662,37 @@ button.button-saida:hover {
   background-color: rgba(213, 45, 45);
   box-shadow: 0px 1px 5px rgb(117, 114, 114);
 }
+
+
+
+
+
+
+/* Estilos da pagina não encontrada */
+.pagina-404{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagina-404 h1 {
+  font-size: 3rem;
+}
+
+.pagina-404 p {
+  font-size: 3rem;
+  line-height: 3rem;
+  font-weight: 500;
+}
+
+.pagina-404 a{
+  align-self: center;
+  width: auto;
+}
+
 
 
 /**/
