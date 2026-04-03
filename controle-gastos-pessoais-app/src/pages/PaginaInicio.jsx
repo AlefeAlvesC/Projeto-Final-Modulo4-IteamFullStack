@@ -9,14 +9,21 @@ function PaginaInicio() {
   const { gastos , orcamento} = useGastos()
 
   let saldo = 0;
+  let entrada = 0;
+  let saida = 0;
+  if (orcamento) {
+    entrada = orcamento.reduce((acumula, valorAtual) => 
+      acumula + Number(valorAtual.valor),
+    0);
+  }
 
-  let entrada = orcamento.reduce((acumula, valorAtual) => 
-    acumula + Number(valorAtual.valor),
-  0);
+  if (gastos) {
+    saida = gastos.reduce((acumula, valorAtual) => {
+      return acumula + Number(valorAtual.valor);
+    }, 0);
+  }
 
-  let saida = gastos.reduce((acumula, valorAtual) => {
-    return acumula + Number(valorAtual.valor);
-  }, 0);
+  
   
   saldo = entrada - saida;
 
