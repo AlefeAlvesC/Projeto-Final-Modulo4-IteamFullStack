@@ -29,7 +29,6 @@ const CardResumo = ({name,saldo}) => {
             }}></i>
     }else if(name === "Saídas"){
         obgStyle = {color:"rgb(223, 48, 48)"}
-        msgCompleta = "Pendentes"
         iconText = <i 
             className="fa-solid fa-arrow-trend-down" 
             style={{
