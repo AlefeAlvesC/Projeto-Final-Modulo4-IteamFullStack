@@ -60,6 +60,7 @@ function FormNovoGasto(){
         <div>
           <label htmlFor="nome">Nome do gasto *</label>
           <input type="text" name="nome" id="nome"
+            placeholder='Ex: Gasolina, Conserto Automóvel...'
             value={form.nome}
             onChange={handleChange}
             ref={nomeInputRef}
@@ -72,6 +73,7 @@ function FormNovoGasto(){
         <div>
           <label htmlFor="categoria">Categoria</label>
           <input type="text" name="categoria" id="categoria"
+            placeholder='Ex: Transporte, Saúde...'
             value={form.categoria}
             onChange={handleChange}
           />
@@ -81,6 +83,7 @@ function FormNovoGasto(){
         <div>
           <label htmlFor="valor">Valor *</label>
           <input type="number" name="valor" id="valor"
+            placeholder='Ex: 1235,58'
             value={form.valor}
             onChange={handleChange}
             required

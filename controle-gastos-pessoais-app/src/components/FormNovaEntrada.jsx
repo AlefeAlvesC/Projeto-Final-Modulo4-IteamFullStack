@@ -55,7 +55,7 @@ function FormNovaEntrada() {
             id="valor"
             type="number"
             name="valor"
-            placeholder="Valor"
+            placeholder="Ex: 1235,58"
             value={form.valor}
             onChange={handleChange}
             required

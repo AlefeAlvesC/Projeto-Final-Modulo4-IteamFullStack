@@ -16,7 +16,7 @@ const EntradaList = () => {
             <div className='lista-dados'>
                 {
                     orcamento.map((orca) => (
-                        <Link to={`/entrada/${orca.id}`} className="link-detalhes" key={orca.id}>
+                        <Link to={`/entrada/${orca.id}`} className="link-detalhes-e" key={orca.id}>
                             <EntradaCard
                                 id={orca.id}
                                 data={orca.data}
