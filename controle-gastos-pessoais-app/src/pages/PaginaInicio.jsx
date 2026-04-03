@@ -10,23 +10,13 @@ function PaginaInicio() {
 
   let saldo = 0;
 
-  let entrada = 0;
+  let entrada = orcamento.reduce((acumula, valorAtual) => 
+    acumula + Number(valorAtual.valor),
+  0);
 
-  let saida = 0;
-
-  if ( orcamento ){
-    orcamento.forEach((o) => {
-      entrada += Number(o.valor)
-    })  
-  }
-  
-  if( gastos ){
-    gastos.forEach((g) => {
-      if (g.status === false) {
-        saida += Number(g.valor);
-      }
-    });
-  }
+  let saida = gastos.reduce((acumula, valorAtual) => {
+    return acumula + Number(valorAtual.valor);
+  }, 0);
   
   saldo = entrada - saida;
 
