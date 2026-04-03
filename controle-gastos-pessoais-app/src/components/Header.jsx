@@ -45,7 +45,7 @@ const Header = () => {
                 </NavLink>
             </nav>
 
-            <button ref={menuBtn} className='button-burger' onClick={toggleMenu}><i className='fa-solid fa-bars'></i></button>
+            <button aria-label='Toggle navigation' ref={menuBtn} className='button-burger' onClick={toggleMenu}><i className='fa-solid fa-bars'></i></button>
         </header>
     );
 };
